@@ -1,8 +1,9 @@
 import React from 'react';
+import '../styles.css'
 
 const Search = (props) => {
     return (
-        <div>
+        <div className={'search'}>
             <input
                 value={props.value}
                 onChange={(event) => props.setSearchValue(event.target.value)}

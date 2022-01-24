@@ -1,15 +1,25 @@
-import React from 'react';
 import '../styles.css';
+import {useNavigate} from "react-router-dom";
+import Movie from "./Movie";
 
 const MoviesList = (props) => {
-    console.log(props)
+    const navigate = useNavigate();
+
+    const goDetails = (id) => {
+        navigate(`/details/${id}`);
+    }
+
     return (
         <div className={'flex'}>
-            {props.movies.map((movie, index) => (
-                <div className={'movieContainer'}>
-                    <img key={index} className={'movie'} src={movie.image}/>
-                </div>
-            ))}
+            {props.movies.map((movie, index) => {
+                return (
+                    <div className={'moviesContainer'}>
+                        <div className={'flex1'} key={index}>
+                            <Movie movie={movie} index={index}/>
+                        </div>
+
+                    </div>
+            )})}
         </div>
     );
 };

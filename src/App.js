@@ -22,16 +22,14 @@ const App = () => {
 
     return (
         <div>
-
             <div className={'listContainer'}>
                 <MoviesList
                     movies={movies}
                 />
+
             </div>
             <div>
                 <Footer/>
-            </div>
-            <div>
                 <Bar/>
             </div>
         </div>

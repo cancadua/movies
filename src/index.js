@@ -1,7 +1,8 @@
 import { render } from "react-dom";
-import App from "./App";
-import Details from "./Details";
+import App from "./routes/App";
+import Details from "./routes/Details";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
+import Add from "./routes/Add";
 
 const rootElement = document.getElementById("root");
 render(
@@ -11,7 +12,7 @@ render(
             <Route path="details/:id"
                    element={<Details />}
             />
-            <Route path="/add" element={<App />}/>
+            <Route path="/add" element={<Add />}/>
             <Route path="/signin" element={<App />}/>
             <Route path="/signup" element={<App />}/>
         </Routes>

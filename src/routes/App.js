@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles.css';
-import MoviesList from './components/MoviesList';
+import '../styles.css';
+import MoviesList from '../components/MoviesList';
 import axios from "axios";
-import Footer from "./components/Footer";
-import Bar from "./components/Bar";
-import AddComponent from "./components/AddComponent";
+import Footer from "../components/Footer";
+import Bar from "../components/Bar";
+import AddComponent from "../components/AddComponent";
 
 const App = () => {
     const [movies, setMovies] = useState([]);
@@ -22,7 +22,7 @@ const App = () => {
     }, []);
 
     return (
-        <div>
+        <div className={'background'}>
             <div className={'listContainer'}>
                 <MoviesList
                     movies={movies}

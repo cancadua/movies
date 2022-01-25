@@ -1,13 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles.css';
+import '../styles.css';
 import {useParams} from "react-router-dom";
 import axios from "axios";
-import Movie from "./components/Movie";
-import Footer from "./components/Footer";
-import Bar from "./components/Bar";
-import MovieView from "./components/MovieView";
-import AddComponent from "./components/AddComponent";
+import Footer from "../components/Footer";
+import Bar from "../components/Bar";
+import MovieView from "../components/MovieView";
 
 const Details = () => {
     const { id } = useParams();
@@ -19,7 +17,7 @@ const Details = () => {
         )}, [id]);
 
     return (
-        <div>
+        <div className={'background'}>
             {data && <div>
                 <MovieView movie={data}/>
             </div>}

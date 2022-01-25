@@ -5,6 +5,7 @@ import MoviesList from './components/MoviesList';
 import axios from "axios";
 import Footer from "./components/Footer";
 import Bar from "./components/Bar";
+import AddComponent from "./components/AddComponent";
 
 const App = () => {
     const [movies, setMovies] = useState([]);
@@ -32,8 +33,8 @@ const App = () => {
                 <Footer/>
                 <Bar/>
             </div>
+            <AddComponent/>
         </div>
-
     );
 };
 

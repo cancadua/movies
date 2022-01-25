@@ -6,7 +6,9 @@ import {useNavigate} from "react-router-dom";
 const Logo = () => {
     const navigate = useNavigate();
     return (
-        <img src={'../logo.png'} alt className={'logo'} onClick={() => navigate('/')}/>
+        <div className={'home'} onClick={() => navigate('/')}>
+            <p className={'homeText'}>MOVIES</p>
+        </div>
     );
 };
 

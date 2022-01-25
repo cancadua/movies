@@ -1,5 +1,5 @@
 .title {
-    font-size: 24px;
+    font-size: 1.5rem;
     cursor: pointer;
 }
 
@@ -8,39 +8,13 @@
     display: -webkit-box;
     -webkit-line-clamp: 8;
     -webkit-box-orient: vertical;
-    font-size: 12px;
+    font-size: 0.75rem;
     cursor: pointer;
 }
 
-.logo {
-    cursor: pointer;
-    flex: 0.1;
-    align-self: flex-start;
-    height: 4rem;
-}
-
-.login {
-    cursor: pointer;
-    align-self: flex-end;
-    height: 4rem;
-}
-
-.search {
-    margin: 1rem;
-}
-
-.footer{
-    height: 3rem;
-    background-color: #c8c4c4;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-}
-
-.bar{
+.bar {
     display: flex;
-    background-color: #c8c4c4;
+    background-color: #448844;
     position: fixed;
     height: 4rem;
     top: 0;
@@ -48,12 +22,122 @@
     width: 100%;
 }
 
+.bar .home {
+    position: relative;
+    display: flex;
+    align-content: flex-start;
+    cursor: pointer;
+    width: 10%;
+    height: 4rem;
+}
+
+.bar .homeText {
+    text-shadow:    -0.0625rem 0.0625rem 0 #ffffff,
+    -0.0625rem 0.0625rem 0 #ffffff,
+    0.0625rem -0.0625rem 0 #ffffff,
+    -0.0625rem -0.0625rem 0 #ffffff;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #444488;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    margin: 0 -50% 0 0;
+    transform: translate(15%, -50%)
+}
+
+.bar .login {
+    cursor: pointer;
+    align-self: flex-end;
+    height: 4rem;
+}
+
+.bar .searchContainer {
+    margin-left: 6rem;
+    position: relative;
+    float: right;
+}
+
+.bar input[type=text] {
+    padding: 0.375rem;
+    margin-top: 0.9rem;
+    font-size: 1rem;
+    border: none;
+}
+
+.bar .searchContainer button {
+    float: right;
+    padding: 0.375rem 0.625rem;
+    margin-top: 0.9rem;
+    margin-right: 1rem;
+    background: #ddd;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.bar .center {
+    text-shadow:    0.0625rem 0.0625rem 0 #ffffff,
+    -0.0625rem 0.0625rem 0 #ffffff,
+    0.0625rem -0.0625rem 0 #ffffff,
+    -0.0625rem -0.0625rem 0 #ffffff;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #444488;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    margin: 0 -333px 0 0;
+    transform: translate(-50%, -50%)
+}
+
+.row {
+    justify-content: space-around;
+    width: 10%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.backTop {
+    transform: scale(1.2);
+    text-shadow:    0.0625rem 0.0625rem 0 #ffffff,
+    -0.0625rem 0.0625rem 0 #ffffff,
+    0.0625rem -0.0625rem 0 #ffffff,
+    -0.0625rem -0.0625rem 0 #ffffff;
+    position: fixed;
+    bottom: 5rem;
+    right: 5rem;
+    width: 4rem;
+    height: 4rem;
+    font-weight: 1200;
+    font-size: 2.5rem;
+    background: #448844;
+    color: #444488;
+    cursor: pointer;
+    border-radius: 222px;
+    border: none;
+}
+
+.home {
+    justify-self: flex-start;
+}
+
+.footer {
+    height: 3rem;
+    background-color: #448844;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
 .movieContainer {
     flex: 1;
-    height: 256px;
+    height: 16rem;
     display: flex;
-    border: 1px solid #ddd;
-    border-radius: 20px;
+    border: 0.0625rem solid #ddd;
+    border-radius: 1.25rem;
 }
 
 .movieViewContainer {
@@ -62,34 +146,34 @@
     height: 100vh;
     flex: 1;
     display: flex;
-    border-radius: 20px;
+    border-radius: 1.25rem;
 }
 
 .moviesContainer {
     width: 33%;
     display: flex;
-    padding: 8px;
+    padding: 0.5rem;
 }
 
 .movie {
     cursor: pointer;
     position: relative;
-    border: 1px solid #ddd;
-    border-radius: 20px;
+    border: 0.0625rem solid #ddd;
+    border-radius: 1.25rem;
     width: 10%;
 }
 
 .movieView {
     position: relative;
-    border: 1px solid #ddd;
-    border-radius: 20px;
+    border: 0.0625rem solid #ddd;
+    border-radius: 1.25rem;
     width: 10%;
 }
 
 .listContainer {
     margin-top: 4rem;
     margin-bottom: 4rem;
-    padding: 30px;
+    padding: 2rem;
 }
 
 img {
@@ -103,17 +187,18 @@ img {
 }
 
 .flex1 {
+    position: sticky;
     flex: 1;
 }
 
 .movieTitle {
-    font-size: 32px;
+    font-size: 2rem;
     flex: 1;
     justify-content: center;
 }
 
 .movieContent {
-    font-size: 24px;
+    font-size: 1.5rem;
     flex: 1;
     justify-content: center;
 }

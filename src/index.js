@@ -11,6 +11,9 @@ render(
             <Route path="details/:id"
                    element={<Details />}
             />
+            <Route path="/add" element={<App />}/>
+            <Route path="/signin" element={<App />}/>
+            <Route path="/signup" element={<App />}/>
         </Routes>
     </BrowserRouter>,
     rootElement

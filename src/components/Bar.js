@@ -8,14 +8,14 @@ import {useNavigate} from "react-router-dom";
 const Bar = () => {
 
     return (
-        <navbar>
+        <div>
             <div className={'bar'}>
                 <Logo/>
                 <Search/>
                 <div className={'flex1'}/>
                 <Login/>
             </div>
-        </navbar>
+        </div>
     );
 }
 

@@ -7,6 +7,7 @@ import Movie from "./components/Movie";
 import Footer from "./components/Footer";
 import Bar from "./components/Bar";
 import MovieView from "./components/MovieView";
+import AddComponent from "./components/AddComponent";
 
 const Details = () => {
     const { id } = useParams();

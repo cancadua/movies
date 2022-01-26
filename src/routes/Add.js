@@ -10,7 +10,6 @@ import {useNavigate} from "react-router-dom";
 
 const Add = () => {
     const [state, setState] = useState({movie: {title: '', url: '', content: ''}})
-    const [image, setImage] = useState('');
 
     const navigate = useNavigate();
     const sendMovie = (event) => {
@@ -36,11 +35,6 @@ const Add = () => {
         setState({movie});
     }
 
-    const handleImageChange = (event) => {
-        console.log(event.target.url)
-        setImage(URL.createObjectURL(event.target.files[0]));
-    }
-
     return (
         <div>
             <div className={'background'}>
@@ -49,7 +43,7 @@ const Add = () => {
                         <label htmlFor="file-input" className={'uploadLabel'}>
                             <img src={state.movie.url} className={'movieUpload'} alt={''}/>
                         </label>
-                        <textarea name={'url'} placeholder={'Url...'} className={'uploadTitle'} onChange={handleInputChange} onFocusOut={handleImageChange}/>
+                        <textarea name={'url'} placeholder={'Url...'} className={'uploadTitle'} onBlur={handleInputChange}/>
                     </div>
                     <div className={'flex1'}>
                         <textarea name={'title'} placeholder={'Title...'} className={'uploadTitle'} onChange={handleInputChange}/>

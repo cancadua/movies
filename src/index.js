@@ -8,7 +8,6 @@ import Signin from "./routes/Signin";
 import { isExpired } from "react-jwt";
 
 const PrivateRoute = () => {
-    console.log(!isExpired(localStorage.getItem('token')))
     return (!isExpired(localStorage.getItem('token'))) ? <Add/> : <Navigate to="/signin"/>;
 };
 

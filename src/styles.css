@@ -138,6 +138,7 @@
 }
 
 .footer {
+    display: flex;
     height: 3rem;
     background-color: #448844;
     position: fixed;
@@ -282,4 +283,8 @@ img {
     background: #448844;
     margin: 1rem auto auto auto;
     display: flex;
+}
+
+.footerText {
+    align-self: flex-end;
 }

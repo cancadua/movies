@@ -1,14 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../styles.css'
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 
 const Search = (props) => {
+    const [state, setState] = useState('')
+
     return (
         <div className="searchContainer">
             <form>
-                <input type="text" placeholder="Search.." name="search"/>
-                    <button type="submit"><i className="bi bi-search"/></button>
+                <input onChange={(event) => setState(event.target.value)} type="text" placeholder="Search.." name="search"/>
+                    <button type="submit" onClick={(e) => {
+                        e.preventDefault();
+                        props.setSearch(state)
+                    }}><i className="bi bi-search"/>
+
+                    </button>
             </form>
         </div>
     );

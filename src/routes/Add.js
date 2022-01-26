@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles.css';
 import Footer from "../components/Footer";
@@ -9,22 +9,21 @@ import {useNavigate} from "react-router-dom";
 
 
 const Add = () => {
-    const [state, setState] = useState({movie: {title: '', content: ''}})
+    const [state, setState] = useState({movie: {title: '', url: '', content: ''}})
     const [image, setImage] = useState('');
 
     const navigate = useNavigate();
     const sendMovie = (event) => {
         event.preventDefault();
-        console.log(state)
         axios({
             method: 'post',
             url: 'https://pr-movies.herokuapp.com/api/movies',
             data: {
                 title: state.movie.title,
-                image: image,
+                image: state.movie.url,
                 content: state.movie.content
             }
-        }).then((response) => {
+        }).then(() => {
             navigate('/');
         }).catch((error) => {
             console.log(error);
@@ -38,6 +37,7 @@ const Add = () => {
     }
 
     const handleImageChange = (event) => {
+        console.log(event.target.url)
         setImage(URL.createObjectURL(event.target.files[0]));
     }
 
@@ -47,10 +47,9 @@ const Add = () => {
                 <form className={'movieViewContainer'} onSubmit={sendMovie}>
                     <div className={'uploadContainer'}>
                         <label htmlFor="file-input" className={'uploadLabel'}>
-                            {(image && <img src={image} className={'movieUpload'} alt={''}/>) ||
-                                <img src={'../upload.png'} className={'movieUpload'} alt={''}/>}
+                            <img src={state.movie.url} className={'movieUpload'} alt={''}/>
                         </label>
-                        <input className="imageUpload" id="file-input" type="file" onChange={handleImageChange}/>
+                        <textarea name={'url'} placeholder={'Url...'} className={'uploadTitle'} onChange={handleInputChange} onFocusOut={handleImageChange}/>
                     </div>
                     <div className={'flex1'}>
                         <textarea name={'title'} placeholder={'Title...'} className={'uploadTitle'} onChange={handleInputChange}/>

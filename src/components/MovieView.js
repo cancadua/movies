@@ -1,18 +1,11 @@
-import React, {useEffect, useState} from 'react'
-import {useNavigate} from "react-router-dom";
+import React, {useEffect} from 'react'
 
 
-const MovieView = (props, index) => {
-    const [id, setId] = useState()
-    const navigate = useNavigate();
+const MovieView = (props) => {
 
     useEffect(() => {
-        setId(props.movie.id)
     }, [props])
 
-    const goDetails = () => {
-        navigate(`/details/${id}`, {state: id});
-    }
     return (
         <div className={'movieViewContainer'}>
             <img src={props.movie.image} className={'movieView'} alt={''} />

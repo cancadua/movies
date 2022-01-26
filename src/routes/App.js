@@ -8,6 +8,7 @@ import Bar from "../components/Bar";
 import AddComponent from "../components/AddComponent";
 
 const App = () => {
+    const [search, setSearch] = useState('')
     const [movies, setMovies] = useState([]);
 
     const getMovieRequest = async () => {
@@ -24,14 +25,20 @@ const App = () => {
     return (
         <div className={'background'}>
             <div className={'listContainer'}>
-                <MoviesList
-                    movies={movies}
-                />
+                {search && movies ?
+                    <MoviesList movies={movies.filter(item => {
+                        if(item.title !== undefined)
+                            return item.title.includes(search)
+                        return false
+                    })}/> :
+                    <MoviesList movies={movies}/>
+                }
+
 
             </div>
             <div>
                 <Footer/>
-                <Bar/>
+                <Bar setSearch={setSearch}/>
             </div>
             <AddComponent/>
         </div>

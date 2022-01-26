@@ -1,13 +1,7 @@
 import '../styles.css';
-import {useNavigate} from "react-router-dom";
 import Movie from "./Movie";
 
 const MoviesList = (props) => {
-    const navigate = useNavigate();
-
-    const goDetails = (id) => {
-        navigate(`/details/${id}`);
-    }
 
     return (
         <div className={'flex'}>

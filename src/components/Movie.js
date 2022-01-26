@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import {useNavigate} from "react-router-dom";
 
 
-const Movie = (props, index) => {
+const Movie = (props) => {
     const [id, setId] = useState()
     const navigate = useNavigate();
 

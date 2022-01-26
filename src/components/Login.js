@@ -5,7 +5,6 @@ import {isExpired} from "react-jwt";
 
 const Login = () => {
     const navigate = useNavigate();
-    console.log(isExpired(localStorage.getItem('token')))
 
     return (
 

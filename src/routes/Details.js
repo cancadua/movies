@@ -18,9 +18,9 @@ const Details = () => {
 
     return (
         <div className={'background'}>
-            {data && <div>
+            {data &&
                 <MovieView movie={data}/>
-            </div>}
+            }
             <div>
                 <Footer/>
                 <Bar/>

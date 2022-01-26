@@ -15,13 +15,12 @@ const Add = () => {
 
     const handleInputChange = (event) => {
         setImage(URL.createObjectURL(event.target.files[0]));
-        console.log(image)
     }
 
     return (
         <div>
             <div className={'background'}>
-                <form className={'movieViewContainer'} onSubmit={sendMovie()}>
+                <form className={'movieViewContainer'} onSubmit={sendMovie}>
                     <div className={'uploadContainer'}>
                         <label htmlFor="file-input" className={'uploadLabel'}>
                             {(image && <img src={image} className={'movieUpload'} alt={''}/>) ||

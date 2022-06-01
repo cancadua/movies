@@ -32,7 +32,7 @@ const Signup = () => {
 
         axios({
             method: 'post',
-            url: 'https://pr-movies.herokuapp.com/api/user/create',
+            url: 'https://movies-api-ag.herokuapp.com/api/user/create',
             data: {
                 name: state.account.username,
                 email: state.account.email,

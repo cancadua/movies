@@ -12,10 +12,11 @@ const App = () => {
     const [movies, setMovies] = useState([]);
 
     const getMovieRequest = async () => {
-        axios.get('https://pr-movies.herokuapp.com/api/movies', {
+        axios.get('https://movies-api-ag.herokuapp.com/api/movies', {
         }).then((response)=>{
             setMovies(response.data.reverse());
         })
+          .catch((e) => {console.error(e)})
     };
 
     useEffect(() => {

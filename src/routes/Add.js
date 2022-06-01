@@ -16,7 +16,7 @@ const Add = () => {
         event.preventDefault();
         axios({
             method: 'post',
-            url: 'https://pr-movies.herokuapp.com/api/movies',
+            url: 'https://movies-api-ag.herokuapp.com/api/movies',
             data: {
                 title: state.movie.title,
                 image: state.movie.url,

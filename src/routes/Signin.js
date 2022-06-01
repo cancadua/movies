@@ -31,13 +31,13 @@ const Signin = () => {
 
         axios({
             method: 'post',
-            url: 'https://pr-movies.herokuapp.com/api/user/auth',
+            url: 'https://movies-api-ag.herokuapp.com/api/user/auth',
             data: {
                 login: state.account.username,
                 password: state.account.password
             }
         }).then((response) => {
-            localStorage.setItem('token', response.data.token);
+            localStorage.setItem('token', response.data);
             navigate('/');
         }).catch((error) => {
             const errors = {};

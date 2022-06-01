@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/movies/static/css/main.585b3c96.css",
+    "main.js": "/movies/static/js/main.51e31392.js",
+    "static/media/bootstrap-icons.woff?": "/movies/static/media/bootstrap-icons.38c4d2499557ae0379fd.woff",
+    "static/media/bootstrap-icons.woff2?": "/movies/static/media/bootstrap-icons.2b56e79ae5013246de29.woff2",
+    "index.html": "/movies/index.html",
+    "main.585b3c96.css.map": "/movies/static/css/main.585b3c96.css.map",
+    "main.51e31392.js.map": "/movies/static/js/main.51e31392.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.585b3c96.css",
+    "static/js/main.51e31392.js"
+  ]
+}
